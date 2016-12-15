@@ -1,0 +1,27 @@
+\#\-Template Project
+
+This is a template project, in a similar vein to ngl's Blank\-N\-G\-L. It contains the recommended starting point for any projects that use the shader library.
+
+This template includes \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro}, \hyperlink{struct_shader_variables}{Shader\-Variables}, \hyperlink{class_shader_set}{Shader\-Set}, \hyperlink{struct_shader_pro}{Shader\-Pro} and \hyperlink{class_entity}{Entity}, which are all required to use the library and are considered the components of the library.
+
+It also includes an \hyperlink{class_n_g_l_scene}{N\-G\-L\-Scene} class and \hyperlink{class_background}{Background}, which inherits from \hyperlink{class_entity}{Entity}. Both of these are recommended for use with my classes, since they are good examples of how to use the library, and the \hyperlink{class_n_g_l_scene}{N\-G\-L\-Scene} will deal with the required \hyperlink{struct_shader_variables}{Shader\-Variables} automatically, so that the user does not need to set those up themselves. The \hyperlink{class_background}{Background} class is also recommended since it shows how to inherit from \hyperlink{class_entity}{Entity}, and means that there will always be something in the background rather than the clear color.
+
+The user could rewrite or get rid of either of these if they prefer to use the library in their own way.
+
+The template also comes with a default shader that shows how it can be written, in this case it is the same as the \char`\"{}new\char`\"{} option in Shader\-Toy.
+
+\subsection*{shader text files}
+
+The shader text files take the following format\-: ``` \#comments are made with \#s
+
+\#start with S\-H\-A\-D\-E\-R and shader name. one M\-A\-I\-N is required. S\-H\-A\-D\-E\-R M\-A\-I\-N
+
+\#specify fragment shader glsl file. This will be combined with sampler2\-Ds if there are textures and the Base\-Fragment.\-glsl file F\-R\-A\-G\-M\-E\-N\-T shaders/\-Default\-Quad\-Fragment.\-glsl
+
+\#specify vertex shader glsl file. This will be combined with the Base\-Vertex.\-glsl V\-E\-R\-T\-E\-X shaders/\-Geo\-Vertex.\-glsl
+
+\#textures can be specified with T\-E\-X\-T\-U\-R\-E followed by type (2\-D) and then the file T\-E\-X\-T\-U\-R\-E 2\-D textures/example.\-png T\-E\-X\-T\-U\-R\-E 2\-D textures/example2.\-png
+
+\#end the shader E\-N\-D M\-A\-I\-N
+
+``` 

@@ -1,0 +1,176 @@
+\hypertarget{struct_shader_pro}{\section{Shader\-Pro Struct Reference}
+\label{struct_shader_pro}\index{Shader\-Pro@{Shader\-Pro}}
+}
+
+
+mostly used to add shaders and use shaders. simple interaction means it is easy to use  
+
+
+
+
+{\ttfamily \#include $<$Shader\-Lib\-Pro.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_shader_pro_a1dfb06c4b3b2d1651492a0a3c44ef555}{Debug\-Mode} \{ {\bfseries C\-O\-M\-P\-I\-L\-E}, 
+{\bfseries L\-I\-N\-K}
+ \}
+\begin{DoxyCompactList}\small\item\em enum used for debugging \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_shader_pro_a6a156214f2ccce2b6995cd27b1489e8e}{\hyperlink{struct_shader_pro_a6a156214f2ccce2b6995cd27b1489e8e}{Shader\-Pro} ()}\label{struct_shader_pro_a6a156214f2ccce2b6995cd27b1489e8e}
+
+\begin{DoxyCompactList}\small\item\em contructor initialises values to 0 \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a5a188aa3f9272f910d0911da07ce131d}{\hyperlink{struct_shader_pro_a5a188aa3f9272f910d0911da07ce131d}{$\sim$\-Shader\-Pro} ()}\label{struct_shader_pro_a5a188aa3f9272f910d0911da07ce131d}
+
+\begin{DoxyCompactList}\small\item\em destructor deletes framebuffers \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a4044a4eac55f3a13b7bffc932dc6b980}{void \hyperlink{struct_shader_pro_a4044a4eac55f3a13b7bffc932dc6b980}{compile} ()}\label{struct_shader_pro_a4044a4eac55f3a13b7bffc932dc6b980}
+
+\begin{DoxyCompactList}\small\item\em compile the source code to be used by the shader library \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_abe5d4cf1c8eb0457e022a9b4df208056}{void \hyperlink{struct_shader_pro_abe5d4cf1c8eb0457e022a9b4df208056}{load\-Vert\-Source} ()}\label{struct_shader_pro_abe5d4cf1c8eb0457e022a9b4df208056}
+
+\begin{DoxyCompactList}\small\item\em load source code for the vertex shader, including adding the Base\-Vertex code \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a1b91bc81ec80f37ee9ff9145a6604272}{void \hyperlink{struct_shader_pro_a1b91bc81ec80f37ee9ff9145a6604272}{load\-Frag\-Source} ()}\label{struct_shader_pro_a1b91bc81ec80f37ee9ff9145a6604272}
+
+\begin{DoxyCompactList}\small\item\em load source code for the frag shader, including adding the Base\-Vertex code \end{DoxyCompactList}\item 
+std\-::string \hyperlink{struct_shader_pro_a07d7c40d47452a9b5b108854398a27bc}{load\-Source} (const std\-::string \&\-\_\-file\-Name)
+\begin{DoxyCompactList}\small\item\em loads text from a file \end{DoxyCompactList}\item 
+std\-::string \hyperlink{struct_shader_pro_a2597c8fede9842fad4b0e14db042ef91}{get\-Frag\-Base} ()
+\begin{DoxyCompactList}\small\item\em load fragment base code to add to fragment glsl file \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a20ab79316be828c3d08f5016739e48a5}{void \hyperlink{struct_shader_pro_a20ab79316be828c3d08f5016739e48a5}{load\-Textures} ()}\label{struct_shader_pro_a20ab79316be828c3d08f5016739e48a5}
+
+\begin{DoxyCompactList}\small\item\em load the textures from their source files \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_ad54d2cce5d4fac7089610de3602fc2af}{void \hyperlink{struct_shader_pro_ad54d2cce5d4fac7089610de3602fc2af}{textures\-To\-Shader} ()}\label{struct_shader_pro_ad54d2cce5d4fac7089610de3602fc2af}
+
+\begin{DoxyCompactList}\small\item\em link the textures to the shader \end{DoxyCompactList}\item 
+void \hyperlink{struct_shader_pro_a641844c63583b896ecc5822a17eef21b}{load\-Image} (int \-\_\-texture\-Unit, \hyperlink{struct_texture_data}{Texture\-Data} \-\_\-texture, G\-Lenum \-\_\-type)
+\begin{DoxyCompactList}\small\item\em read an image from a file to a Gl texture \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a2d111c2168ed1c32f622a14f7d8dceaf}{void \hyperlink{struct_shader_pro_a2d111c2168ed1c32f622a14f7d8dceaf}{print\-Shader\-Data} ()}\label{struct_shader_pro_a2d111c2168ed1c32f622a14f7d8dceaf}
+
+\begin{DoxyCompactList}\small\item\em prints most values contained within the shader, useful for debugging \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a055b4e00dff7becc620096b74ada78f5}{void \hyperlink{struct_shader_pro_a055b4e00dff7becc620096b74ada78f5}{print\-Info\-Log} (G\-Luint \-\_\-id, \hyperlink{struct_shader_pro_a1dfb06c4b3b2d1651492a0a3c44ef555}{Debug\-Mode} \-\_\-mode)}\label{struct_shader_pro_a055b4e00dff7becc620096b74ada78f5}
+
+\begin{DoxyCompactList}\small\item\em prints info from shader compile, for checking errors \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a0c4bf7215d8c134752b13a9a86842ba2}{void \hyperlink{struct_shader_pro_a0c4bf7215d8c134752b13a9a86842ba2}{set\-Up\-Framebuffer} ()}\label{struct_shader_pro_a0c4bf7215d8c134752b13a9a86842ba2}
+
+\begin{DoxyCompactList}\small\item\em creates data required for frame buffer (still in progress) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_shader_pro_a5f134047e932f52e46d1bde8eccc447c}{std\-::string \hyperlink{struct_shader_pro_a5f134047e932f52e46d1bde8eccc447c}{m\-\_\-name}}\label{struct_shader_pro_a5f134047e932f52e46d1bde8eccc447c}
+
+\begin{DoxyCompactList}\small\item\em name given to shader in text file, eg \char`\"{}\-M\-A\-I\-N\char`\"{} \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a129da0c17bbe478c3e3d53cab7015d02}{G\-Luint \hyperlink{struct_shader_pro_a129da0c17bbe478c3e3d53cab7015d02}{m\-\_\-prog\-I\-D}}\label{struct_shader_pro_a129da0c17bbe478c3e3d53cab7015d02}
+
+\begin{DoxyCompactList}\small\item\em shader program I\-D, used by open\-G\-L \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_aef7140b201165a62e77216fd8479f094}{G\-Luint \hyperlink{struct_shader_pro_aef7140b201165a62e77216fd8479f094}{m\-\_\-frag\-I\-D}}\label{struct_shader_pro_aef7140b201165a62e77216fd8479f094}
+
+\begin{DoxyCompactList}\small\item\em fragment shader I\-D \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_ab798c7c102d4183fc36392884374aaee}{G\-Luint \hyperlink{struct_shader_pro_ab798c7c102d4183fc36392884374aaee}{m\-\_\-vert\-I\-D}}\label{struct_shader_pro_ab798c7c102d4183fc36392884374aaee}
+
+\begin{DoxyCompactList}\small\item\em vertex shader I\-D \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_aedfab2d94289b844c81ec90b94e337b5}{G\-Luint \hyperlink{struct_shader_pro_aedfab2d94289b844c81ec90b94e337b5}{m\-\_\-out\-Buffer\-I\-D}}\label{struct_shader_pro_aedfab2d94289b844c81ec90b94e337b5}
+
+\begin{DoxyCompactList}\small\item\em framebuffer I\-D, if it has one, otherwise is set to 0 \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a710261840d8482d848970b1b8967f828}{G\-Luint \hyperlink{struct_shader_pro_a710261840d8482d848970b1b8967f828}{m\-\_\-out\-Texture\-I\-D}}\label{struct_shader_pro_a710261840d8482d848970b1b8967f828}
+
+\begin{DoxyCompactList}\small\item\em texture I\-D coming out if it renders to a framebuffer \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a604a470b247093aa492537ce53f41442}{G\-Luint \hyperlink{struct_shader_pro_a604a470b247093aa492537ce53f41442}{m\-\_\-out\-Depth\-Stencil\-I\-D}}\label{struct_shader_pro_a604a470b247093aa492537ce53f41442}
+
+\begin{DoxyCompactList}\small\item\em out depth stencil id, used for rendering to a frame buffer \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_a29aae1d3375fa42b3c78b1cb035e2675}{std\-::string \hyperlink{struct_shader_pro_a29aae1d3375fa42b3c78b1cb035e2675}{m\-\_\-frag\-File}}\label{struct_shader_pro_a29aae1d3375fa42b3c78b1cb035e2675}
+
+\begin{DoxyCompactList}\small\item\em source file of frament shader \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_aea0734e5aa1dc6ddf7b7bdd20f235848}{std\-::string \hyperlink{struct_shader_pro_aea0734e5aa1dc6ddf7b7bdd20f235848}{m\-\_\-vert\-File}}\label{struct_shader_pro_aea0734e5aa1dc6ddf7b7bdd20f235848}
+
+\begin{DoxyCompactList}\small\item\em source file of vertex shader \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_pro_afa957000f293f2fb4217f28f0db321ec}{std\-::vector$<$ \hyperlink{struct_texture_data}{Texture\-Data} $>$ \hyperlink{struct_shader_pro_afa957000f293f2fb4217f28f0db321ec}{m\-\_\-textures}}\label{struct_shader_pro_afa957000f293f2fb4217f28f0db321ec}
+
+\begin{DoxyCompactList}\small\item\em vector of \hyperlink{struct_texture_data}{Texture\-Data} structs \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+mostly used to add shaders and use shaders. simple interaction means it is easy to use 
+
+\hyperlink{struct_shader_pro}{Shader\-Pro} seems complex but this allows the data to be managed away from a user. It does a lot for the user such as loading source, linking and compiling. 
+
+Definition at line 19 of file Shader\-Pro.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_shader_pro_a2597c8fede9842fad4b0e14db042ef91}{\index{Shader\-Pro@{Shader\-Pro}!get\-Frag\-Base@{get\-Frag\-Base}}
+\index{get\-Frag\-Base@{get\-Frag\-Base}!ShaderPro@{Shader\-Pro}}
+\subsubsection[{get\-Frag\-Base}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Shader\-Pro\-::get\-Frag\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_shader_pro_a2597c8fede9842fad4b0e14db042ef91}
+
+
+load fragment base code to add to fragment glsl file 
+
+\begin{DoxyReturn}{Returns}
+the text from the file as well as any texture uniforms required 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Shader\-Pro.\-cpp.
+
+\hypertarget{struct_shader_pro_a641844c63583b896ecc5822a17eef21b}{\index{Shader\-Pro@{Shader\-Pro}!load\-Image@{load\-Image}}
+\index{load\-Image@{load\-Image}!ShaderPro@{Shader\-Pro}}
+\subsubsection[{load\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Pro\-::load\-Image (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-texture\-Unit, }
+\item[{{\bf Texture\-Data}}]{\-\_\-texture, }
+\item[{G\-Lenum}]{\-\_\-type}
+\end{DoxyParamCaption}
+)}}\label{struct_shader_pro_a641844c63583b896ecc5822a17eef21b}
+
+
+read an image from a file to a Gl texture 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-texture\-Unit} & the texture number, eg 0, 1, 2 as shaders can have multiple textures \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-texture} & struct containing all information of the shader \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-type} & the type of shader to load, all G\-L\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-2\-D at the moment \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file Shader\-Pro.\-cpp.
+
+\hypertarget{struct_shader_pro_a07d7c40d47452a9b5b108854398a27bc}{\index{Shader\-Pro@{Shader\-Pro}!load\-Source@{load\-Source}}
+\index{load\-Source@{load\-Source}!ShaderPro@{Shader\-Pro}}
+\subsubsection[{load\-Source}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Shader\-Pro\-::load\-Source (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-file\-Name}
+\end{DoxyParamCaption}
+)}}\label{struct_shader_pro_a07d7c40d47452a9b5b108854398a27bc}
+
+
+loads text from a file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-file\-Name} & the text file containing data for a shader \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the text from the file 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Shader\-Pro.\-cpp.
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_shader_pro_8h}{Shader\-Pro.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/Shader\-Pro.\-cpp\end{DoxyCompactItemize}

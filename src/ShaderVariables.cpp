@@ -1,0 +1,63 @@
+#include "ShaderVariables.h"
+
+#include <iostream>
+#include <ngl/Vec3.h>
+
+ShaderVariables::ShaderVariables() :
+  resolution(0,0,0),
+  globalTime(0),
+  timeDelta(0),
+  frame(0),
+  mouse(0,0,0,0),
+  date(0,0,0,0)
+{
+
+}
+
+void ShaderVariables::reset(bool _hard)
+{
+  globalTime = 0;
+  timeDelta = 0;
+  frame = 0;
+  if(_hard){
+    resolution = ngl::Vec3(0, 0, 0);
+    mouse = ngl::Vec4(0,0,0,0);
+    date = ngl::Vec4(0,0,0,0);
+  }
+}
+
+void ShaderVariables::loadToShader(GLuint _progID)
+{
+  // frag shader uniforms
+  glUniform3f(glGetUniformLocation(_progID, "iResolution"),resolution.m_x, resolution.m_y, resolution.m_z);
+  glUniform1f(glGetUniformLocation(_progID, "iGlobalTime"), globalTime);
+  glUniform1f(glGetUniformLocation(_progID, "iTimeDelta"), timeDelta);
+  glUniform1i(glGetUniformLocation(_progID, "iFrame"), frame);
+  glUniform4f(glGetUniformLocation(_progID, "iMouse"), mouse[0], mouse[1], mouse[2], mouse[3]);
+  glUniform4f(glGetUniformLocation(_progID, "iDate"), date[0], date[1], date[2], date[3]);
+  glUniform1i(glGetUniformLocation(_progID, "iMatID"), matID);
+
+  // vert shader uniforms
+  glUniformMatrix4fv(glGetUniformLocation(_progID, "MV"), 1, GL_FALSE, MV.openGL());
+  glUniformMatrix4fv(glGetUniformLocation(_progID, "MVP"), 1, GL_FALSE, MVP.openGL());
+  glUniformMatrix3fv(glGetUniformLocation(_progID, "normalMatrix"), 1, GL_FALSE, normalMatrix.openGL());
+  glUniformMatrix4fv(glGetUniformLocation(_progID, "M"), 1, GL_FALSE, M.openGL());
+
+  glUniform3f(glGetUniformLocation(_progID, "vResolution"),resolution.m_x, resolution.m_y, resolution.m_z);
+  glUniform1f(glGetUniformLocation(_progID, "vGlobalTime"), globalTime);
+  glUniform1f(glGetUniformLocation(_progID, "vTimeDelta"), timeDelta);
+  glUniform1i(glGetUniformLocation(_progID, "vFrame"), frame);
+  glUniform4f(glGetUniformLocation(_progID, "vMouse"), mouse[0], mouse[1], mouse[2], mouse[3]);
+  glUniform4f(glGetUniformLocation(_progID, "vDate"), date[0], date[1], date[2], date[3]);
+  glUniform1i(glGetUniformLocation(_progID, "vMatID"), matID);
+}
+
+void ShaderVariables::printVariables()
+{
+  std::cout << "Resolution: " << resolution.m_x << ", " << resolution.m_y << ", " << resolution.m_z << std::endl;
+  std::cout << "GobalTime: " << globalTime << std::endl;
+  std::cout << "TimeDelta: " << timeDelta << std::endl;
+  std::cout << "Frame: " << frame << std::endl;
+  std::cout << "Mouse: " << mouse[0] << ", " << mouse[1] << ", " << mouse[2] << ", " << mouse[3] <<std::endl;
+  std::cout << "Date: " << date[0] << ", " << date[1] << ", " << date[2] << ", " << date[3] <<std::endl;
+}

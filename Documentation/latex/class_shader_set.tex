@@ -1,0 +1,141 @@
+\hypertarget{class_shader_set}{\section{Shader\-Set Class Reference}
+\label{class_shader_set}\index{Shader\-Set@{Shader\-Set}}
+}
+
+
+Shader\-Sets contain a vector of shaders and are responsible for managing them and making draw calls to Entities.  
+
+
+
+
+{\ttfamily \#include $<$Shader\-Set.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shader_set_a9bbabbd777c8ca13efb7d8b1d919fb11}{Shader\-Set} (const std\-::string \&\-\_\-source\-File)
+\begin{DoxyCompactList}\small\item\em constructor from source file, taken in text form (see report) \end{DoxyCompactList}\item 
+\hypertarget{class_shader_set_a026cd1988dbd45e6e7e061b2d92d8fbd}{\hyperlink{class_shader_set_a026cd1988dbd45e6e7e061b2d92d8fbd}{$\sim$\-Shader\-Set} ()=default}\label{class_shader_set_a026cd1988dbd45e6e7e061b2d92d8fbd}
+
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_set_aede001dacb08e161768755e9018d0d12}{set\-Shader\-Info} (const std\-::string \&\-\_\-source\-File)
+\begin{DoxyCompactList}\small\item\em used in constructor to read source file and generate shader vector \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_set_adc30a6cd9c60ac29c6a103f60d9b4929}{draw} (\hyperlink{class_entity}{Entity} $\ast$\-\_\-entity, ngl\-::\-Camera $\ast$\-\_\-cam)
+\begin{DoxyCompactList}\small\item\em draw the inputted entity \end{DoxyCompactList}\item 
+\hypertarget{class_shader_set_a716a9bdfc98bd1c43f3c07bbf8b492b8}{void \hyperlink{class_shader_set_a716a9bdfc98bd1c43f3c07bbf8b492b8}{load\-Shaders} ()}\label{class_shader_set_a716a9bdfc98bd1c43f3c07bbf8b492b8}
+
+\begin{DoxyCompactList}\small\item\em compiles all shaders \end{DoxyCompactList}\item 
+\hyperlink{struct_shader_pro}{Shader\-Pro} $\ast$ \hyperlink{class_shader_set_af4fe473c04f2707865df20496723b1e7}{get\-Shader} (const std\-::string \&\-\_\-shader\-Name)
+\begin{DoxyCompactList}\small\item\em return pointer to shader referred to \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shader_set_ad0da5edb6d6dfd043ebf9a2551f12346}{std\-::vector$<$ std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{struct_shader_pro}{Shader\-Pro} $>$ $>$ \hyperlink{class_shader_set_ad0da5edb6d6dfd043ebf9a2551f12346}{m\-\_\-shaders}}\label{class_shader_set_ad0da5edb6d6dfd043ebf9a2551f12346}
+
+\begin{DoxyCompactList}\small\item\em vector of unique pointers to shaders in the set \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Shader\-Sets contain a vector of shaders and are responsible for managing them and making draw calls to Entities. 
+
+Definition at line 18 of file Shader\-Set.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shader_set_a9bbabbd777c8ca13efb7d8b1d919fb11}{\index{Shader\-Set@{Shader\-Set}!Shader\-Set@{Shader\-Set}}
+\index{Shader\-Set@{Shader\-Set}!ShaderSet@{Shader\-Set}}
+\subsubsection[{Shader\-Set}]{\setlength{\rightskip}{0pt plus 5cm}Shader\-Set\-::\-Shader\-Set (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-source\-File}
+\end{DoxyParamCaption}
+)}}\label{class_shader_set_a9bbabbd777c8ca13efb7d8b1d919fb11}
+
+
+constructor from source file, taken in text form (see report) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-source\-File} & the text file to read in a shader \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Shader\-Set.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shader_set_adc30a6cd9c60ac29c6a103f60d9b4929}{\index{Shader\-Set@{Shader\-Set}!draw@{draw}}
+\index{draw@{draw}!ShaderSet@{Shader\-Set}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Set\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{\-\_\-entity, }
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-cam}
+\end{DoxyParamCaption}
+)}}\label{class_shader_set_adc30a6cd9c60ac29c6a103f60d9b4929}
+
+
+draw the inputted entity 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-entity} & the entity to draw \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-cam} & the camera to use for M\-V\-P etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 220 of file Shader\-Set.\-cpp.
+
+\hypertarget{class_shader_set_af4fe473c04f2707865df20496723b1e7}{\index{Shader\-Set@{Shader\-Set}!get\-Shader@{get\-Shader}}
+\index{get\-Shader@{get\-Shader}!ShaderSet@{Shader\-Set}}
+\subsubsection[{get\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader\-Pro} $\ast$ Shader\-Set\-::get\-Shader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-shader\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_shader_set_af4fe473c04f2707865df20496723b1e7}
+
+
+return pointer to shader referred to 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-shader\-Name} & the name given to the shader from the text file, eg \char`\"{}\-M\-A\-I\-N\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the shader needed 
+\end{DoxyReturn}
+
+
+Definition at line 277 of file Shader\-Set.\-cpp.
+
+\hypertarget{class_shader_set_aede001dacb08e161768755e9018d0d12}{\index{Shader\-Set@{Shader\-Set}!set\-Shader\-Info@{set\-Shader\-Info}}
+\index{set\-Shader\-Info@{set\-Shader\-Info}!ShaderSet@{Shader\-Set}}
+\subsubsection[{set\-Shader\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Set\-::set\-Shader\-Info (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-source\-File}
+\end{DoxyParamCaption}
+)}}\label{class_shader_set_aede001dacb08e161768755e9018d0d12}
+
+
+used in constructor to read source file and generate shader vector 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-source\-File} & the text file to read in a shader \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Shader\-Set.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_shader_set_8h}{Shader\-Set.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/Shader\-Set.\-cpp\end{DoxyCompactItemize}

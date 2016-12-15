@@ -1,0 +1,142 @@
+\hypertarget{class_shader_lib_pro}{\section{Shader\-Lib\-Pro Class Reference}
+\label{class_shader_lib_pro}\index{Shader\-Lib\-Pro@{Shader\-Lib\-Pro}}
+}
+Inheritance diagram for Shader\-Lib\-Pro\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shader_lib_pro}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_shader_lib_pro_a7a12f281cef251008a3ccbc04fd2fb52}{add\-Shader} (const std\-::string \&\-\_\-source\-File)
+\begin{DoxyCompactList}\small\item\em add a \hyperlink{class_shader_set}{Shader\-Set} to the library, loaded from text file \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_lib_pro_ae7059e210cd4fc739d12209e904dea75}{draw} (\hyperlink{class_entity}{Entity} $\ast$\-\_\-entity, ngl\-::\-Camera $\ast$\-\_\-cam)
+\begin{DoxyCompactList}\small\item\em draw an entity \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_lib_pro_a9401ba0fe34177ba6955ce769cec1f9b}{use\-Shader} (size\-\_\-t \-\_\-index)
+\begin{DoxyCompactList}\small\item\em use a specific shader, specified when drawing, by the entity \end{DoxyCompactList}\item 
+int \hyperlink{class_shader_lib_pro_a16e8698616a023de15e48b8107d2d1d4}{get\-Shader\-Set\-Amount} ()
+\begin{DoxyCompactList}\small\item\em find out how many Shader\-Sets there currently are \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shader_lib_pro_a69c266b5eabde43b4ca472f36489a1ef}{\hyperlink{class_shader_lib_pro_a69c266b5eabde43b4ca472f36489a1ef}{Shader\-Lib\-Pro} ()}\label{class_shader_lib_pro_a69c266b5eabde43b4ca472f36489a1ef}
+
+\begin{DoxyCompactList}\small\item\em constructor initialises m\-\_\-shader\-Sets and m\-\_\-current\-Shader\-Index to 0 \end{DoxyCompactList}\item 
+\hypertarget{class_shader_lib_pro_a78b250ffc06b58d1a6de95ccadead58d}{\hyperlink{class_shader_lib_pro_a78b250ffc06b58d1a6de95ccadead58d}{$\sim$\-Shader\-Lib\-Pro} ()}\label{class_shader_lib_pro_a78b250ffc06b58d1a6de95ccadead58d}
+
+\begin{DoxyCompactList}\small\item\em destructor prints message to std\-::cout \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shader_lib_pro_ab5415f8247ca7df067ad212ed624cd29}{std\-::vector$<$ std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{class_shader_set}{Shader\-Set} $>$ $>$ \hyperlink{class_shader_lib_pro_ab5415f8247ca7df067ad212ed624cd29}{m\-\_\-shader\-Sets}}\label{class_shader_lib_pro_ab5415f8247ca7df067ad212ed624cd29}
+
+\begin{DoxyCompactList}\small\item\em vector of Shader\-Sets currently active \end{DoxyCompactList}\item 
+\hypertarget{class_shader_lib_pro_a14c11ed244083ea9e82f8e040ba684b9}{int \hyperlink{class_shader_lib_pro_a14c11ed244083ea9e82f8e040ba684b9}{m\-\_\-current\-Shaderindex}}\label{class_shader_lib_pro_a14c11ed244083ea9e82f8e040ba684b9}
+
+\begin{DoxyCompactList}\small\item\em current shader being used \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shader_lib_pro_ae3463efce7974572eefeef5e31732375}{class {\bfseries ngl\-::\-Singleton$<$ Shader\-Lib\-Pro $>$}}\label{class_shader_lib_pro_ae3463efce7974572eefeef5e31732375}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file Shader\-Lib\-Pro.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shader_lib_pro_a7a12f281cef251008a3ccbc04fd2fb52}{\index{Shader\-Lib\-Pro@{Shader\-Lib\-Pro}!add\-Shader@{add\-Shader}}
+\index{add\-Shader@{add\-Shader}!ShaderLibPro@{Shader\-Lib\-Pro}}
+\subsubsection[{add\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Lib\-Pro\-::add\-Shader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-source\-File}
+\end{DoxyParamCaption}
+)}}\label{class_shader_lib_pro_a7a12f281cef251008a3ccbc04fd2fb52}
+
+
+add a \hyperlink{class_shader_set}{Shader\-Set} to the library, loaded from text file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-source\-File} & text file to source shader from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Shader\-Lib\-Pro.\-cpp.
+
+\hypertarget{class_shader_lib_pro_ae7059e210cd4fc739d12209e904dea75}{\index{Shader\-Lib\-Pro@{Shader\-Lib\-Pro}!draw@{draw}}
+\index{draw@{draw}!ShaderLibPro@{Shader\-Lib\-Pro}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Lib\-Pro\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{\-\_\-entity, }
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-cam}
+\end{DoxyParamCaption}
+)}}\label{class_shader_lib_pro_ae7059e210cd4fc739d12209e904dea75}
+
+
+draw an entity 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-entity} & the entity to draw \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-cam} & camera to draw from, can be nullptr to use identity matrices \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Shader\-Lib\-Pro.\-cpp.
+
+\hypertarget{class_shader_lib_pro_a16e8698616a023de15e48b8107d2d1d4}{\index{Shader\-Lib\-Pro@{Shader\-Lib\-Pro}!get\-Shader\-Set\-Amount@{get\-Shader\-Set\-Amount}}
+\index{get\-Shader\-Set\-Amount@{get\-Shader\-Set\-Amount}!ShaderLibPro@{Shader\-Lib\-Pro}}
+\subsubsection[{get\-Shader\-Set\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}int Shader\-Lib\-Pro\-::get\-Shader\-Set\-Amount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_shader_lib_pro_a16e8698616a023de15e48b8107d2d1d4}
+
+
+find out how many Shader\-Sets there currently are 
+
+\begin{DoxyReturn}{Returns}
+number of shaders 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Shader\-Lib\-Pro.\-h.
+
+\hypertarget{class_shader_lib_pro_a9401ba0fe34177ba6955ce769cec1f9b}{\index{Shader\-Lib\-Pro@{Shader\-Lib\-Pro}!use\-Shader@{use\-Shader}}
+\index{use\-Shader@{use\-Shader}!ShaderLibPro@{Shader\-Lib\-Pro}}
+\subsubsection[{use\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Lib\-Pro\-::use\-Shader (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{class_shader_lib_pro_a9401ba0fe34177ba6955ce769cec1f9b}
+
+
+use a specific shader, specified when drawing, by the entity 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-index} & the index of the shader to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Shader\-Lib\-Pro.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_shader_lib_pro_8h}{Shader\-Lib\-Pro.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/Shader\-Lib\-Pro.\-cpp\end{DoxyCompactItemize}

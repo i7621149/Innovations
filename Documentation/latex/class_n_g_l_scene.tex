@@ -1,0 +1,286 @@
+\hypertarget{class_n_g_l_scene}{\section{N\-G\-L\-Scene Class Reference}
+\label{class_n_g_l_scene}\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}}
+}
+
+
+this contains the major management and drawing functions of our programs  
+
+
+
+
+{\ttfamily \#include $<$N\-G\-L\-Scene.\-h$>$}
+
+Inheritance diagram for N\-G\-L\-Scene\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_g_l_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_n_g_l_scene_a1bed6be9823459aeb1e58af2464ba633}{\hyperlink{class_n_g_l_scene_a1bed6be9823459aeb1e58af2464ba633}{N\-G\-L\-Scene} ()}\label{class_n_g_l_scene_a1bed6be9823459aeb1e58af2464ba633}
+
+\begin{DoxyCompactList}\small\item\em initialise variables not dependent on Open\-G\-L or ngl \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}{\hyperlink{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}{$\sim$\-N\-G\-L\-Scene} ()}\label{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}
+
+\begin{DoxyCompactList}\small\item\em destructor prints message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_n_g_l_scene_aab2b866db534d286a56cc2240ed98790}{void \hyperlink{class_n_g_l_scene_aab2b866db534d286a56cc2240ed98790}{initialize\-G\-L} ()}\label{class_n_g_l_scene_aab2b866db534d286a56cc2240ed98790}
+
+\begin{DoxyCompactList}\small\item\em initialise shaders and variables etc, after initialising ngl \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_a37bec65bfba7b7a717d803d369221e2d}{void \hyperlink{class_n_g_l_scene_a37bec65bfba7b7a717d803d369221e2d}{paint\-G\-L} ()}\label{class_n_g_l_scene_a37bec65bfba7b7a717d803d369221e2d}
+
+\begin{DoxyCompactList}\small\item\em render scene, called upon update(), which is called in timer\-Event \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a39f61e86b1e5a6c8125e3a762ea3f7f7}{resize\-G\-L} (Q\-Resize\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon resizing window \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a7505fac688fe82b4f99e601043eb7764}{resize\-G\-L} (int \-\_\-w, int \-\_\-h)
+\begin{DoxyCompactList}\small\item\em called upon resizing window \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a7a03bd8f485d27c4de72d24139ed8f8a}{key\-Press\-Event} (Q\-Key\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon hitting a key \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_abfb1a790affff40de7183fa4016d1d2b}{key\-Release\-Event} (Q\-Key\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon releasing a key \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_aa9822d94cb9c93a666fef86d86d2cf6c}{mouse\-Move\-Event} (Q\-Mouse\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon moving the mouse \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a8ead414be695622f8ace373628a25727}{mouse\-Press\-Event} (Q\-Mouse\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon pressing the mouse \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a6f363e63153342d91bafd3bdaf271c20}{mouse\-Release\-Event} (Q\-Mouse\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon releasing the mouse \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a5ea289b6eb36df76da5e6e39be04c779}{wheel\-Event} (Q\-Wheel\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called upon scrolling \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_afeb250f7c7b1cac320d06dd14a279cb9}{timer\-Event} (Q\-Timer\-Event $\ast$\-\_\-event)
+\begin{DoxyCompactList}\small\item\em called every timer event \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_ab9cff1e645aa573a5679a55e5c845da8}{void \hyperlink{class_n_g_l_scene_ab9cff1e645aa573a5679a55e5c845da8}{toggle\-Full\-Screen} ()}\label{class_n_g_l_scene_ab9cff1e645aa573a5679a55e5c845da8}
+
+\begin{DoxyCompactList}\small\item\em toggle program between normal and fullscreen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_n_g_l_scene_a8d5dabddc30ca59d34088595bdd7d174}{int \hyperlink{class_n_g_l_scene_a8d5dabddc30ca59d34088595bdd7d174}{m\-\_\-width}}\label{class_n_g_l_scene_a8d5dabddc30ca59d34088595bdd7d174}
+
+\begin{DoxyCompactList}\small\item\em screen width \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_ad0fccff55fd9df6af9adda2c654de21d}{int \hyperlink{class_n_g_l_scene_ad0fccff55fd9df6af9adda2c654de21d}{m\-\_\-height}}\label{class_n_g_l_scene_ad0fccff55fd9df6af9adda2c654de21d}
+
+\begin{DoxyCompactList}\small\item\em screen height \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_a969d56f1bfb80598b0333107bb1fb60c}{bool \hyperlink{class_n_g_l_scene_a969d56f1bfb80598b0333107bb1fb60c}{m\-\_\-full\-Screen}}\label{class_n_g_l_scene_a969d56f1bfb80598b0333107bb1fb60c}
+
+\begin{DoxyCompactList}\small\item\em whether program is in fullscreen mode \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_ab5830b16af87f2843e8f41d212a6eb01}{bool \hyperlink{class_n_g_l_scene_ab5830b16af87f2843e8f41d212a6eb01}{m\-\_\-mouse\-Down}}\label{class_n_g_l_scene_ab5830b16af87f2843e8f41d212a6eb01}
+
+\begin{DoxyCompactList}\small\item\em whether mouse is pressed \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_a9de69b584317b729b6fd95d1bcc37f05}{Q\-Time \hyperlink{class_n_g_l_scene_a9de69b584317b729b6fd95d1bcc37f05}{m\-\_\-time}}\label{class_n_g_l_scene_a9de69b584317b729b6fd95d1bcc37f05}
+
+\begin{DoxyCompactList}\small\item\em used to check elapsed time, set to time of program start \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_a043c90078e0862126109544a5fe24b33}{int \hyperlink{class_n_g_l_scene_a043c90078e0862126109544a5fe24b33}{m\-\_\-last\-Frame\-Time}}\label{class_n_g_l_scene_a043c90078e0862126109544a5fe24b33}
+
+\begin{DoxyCompactList}\small\item\em milliseconds taken to render last frame \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_af270fda48df0e58b244f0484f8d3ad2d}{ngl\-::\-Vec4 \hyperlink{class_n_g_l_scene_af270fda48df0e58b244f0484f8d3ad2d}{m\-\_\-mouse\-Data}}\label{class_n_g_l_scene_af270fda48df0e58b244f0484f8d3ad2d}
+
+\begin{DoxyCompactList}\small\item\em mouse data. x, y\-: mouse position if m\-\_\-mouse\-Down (else last position when m\-\_\-mouse\-Down) z, w\-: initial mouse position on click (if mouse is up, is negative) \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}{ngl\-::\-Camera \hyperlink{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}{m\-\_\-cam}}\label{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}
+
+\begin{DoxyCompactList}\small\item\em scene camera \end{DoxyCompactList}\item 
+\hypertarget{class_n_g_l_scene_aa72ef89c47d7b79a65cd07227ed6bb17}{\hyperlink{class_background}{Background} \hyperlink{class_n_g_l_scene_aa72ef89c47d7b79a65cd07227ed6bb17}{m\-\_\-background}}\label{class_n_g_l_scene_aa72ef89c47d7b79a65cd07227ed6bb17}
+
+\begin{DoxyCompactList}\small\item\em background entity, single quad \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this contains the major management and drawing functions of our programs 
+
+Definition at line 23 of file N\-G\-L\-Scene.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_g_l_scene_a7a03bd8f485d27c4de72d24139ed8f8a}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!key\-Press\-Event@{key\-Press\-Event}}
+\index{key\-Press\-Event@{key\-Press\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{key\-Press\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::key\-Press\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Key\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a7a03bd8f485d27c4de72d24139ed8f8a}
+
+
+called upon hitting a key 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt key event containing key info, such as type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_abfb1a790affff40de7183fa4016d1d2b}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!key\-Release\-Event@{key\-Release\-Event}}
+\index{key\-Release\-Event@{key\-Release\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{key\-Release\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::key\-Release\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Key\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_abfb1a790affff40de7183fa4016d1d2b}
+
+
+called upon releasing a key 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt key event containing key info, such as type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_aa9822d94cb9c93a666fef86d86d2cf6c}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!mouse\-Move\-Event@{mouse\-Move\-Event}}
+\index{mouse\-Move\-Event@{mouse\-Move\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{mouse\-Move\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::mouse\-Move\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Mouse\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_aa9822d94cb9c93a666fef86d86d2cf6c}
+
+
+called upon moving the mouse 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt mouse event containing mouse position etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_a8ead414be695622f8ace373628a25727}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!mouse\-Press\-Event@{mouse\-Press\-Event}}
+\index{mouse\-Press\-Event@{mouse\-Press\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{mouse\-Press\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::mouse\-Press\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Mouse\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a8ead414be695622f8ace373628a25727}
+
+
+called upon pressing the mouse 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt mouse event containing mouse position etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 117 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_a6f363e63153342d91bafd3bdaf271c20}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!mouse\-Release\-Event@{mouse\-Release\-Event}}
+\index{mouse\-Release\-Event@{mouse\-Release\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{mouse\-Release\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::mouse\-Release\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Mouse\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a6f363e63153342d91bafd3bdaf271c20}
+
+
+called upon releasing the mouse 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt mouse event containing mouse position etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_a39f61e86b1e5a6c8125e3a762ea3f7f7}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!resize\-G\-L@{resize\-G\-L}}
+\index{resize\-G\-L@{resize\-G\-L}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{resize\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::resize\-G\-L (
+\begin{DoxyParamCaption}
+\item[{Q\-Resize\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a39f61e86b1e5a6c8125e3a762ea3f7f7}
+
+
+called upon resizing window 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt resize event containing new width and height \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_a7505fac688fe82b4f99e601043eb7764}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!resize\-G\-L@{resize\-G\-L}}
+\index{resize\-G\-L@{resize\-G\-L}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{resize\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::resize\-G\-L (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-w, }
+\item[{int}]{\-\_\-h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a7505fac688fe82b4f99e601043eb7764}
+
+
+called upon resizing window 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-w} & width of window \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-h} & height of window \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_afeb250f7c7b1cac320d06dd14a279cb9}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!timer\-Event@{timer\-Event}}
+\index{timer\-Event@{timer\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{timer\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::timer\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Timer\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_afeb250f7c7b1cac320d06dd14a279cb9}
+
+
+called every timer event 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt timer event, can be used if multiple timers are set up \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file N\-G\-L\-Scene.\-cpp.
+
+\hypertarget{class_n_g_l_scene_a5ea289b6eb36df76da5e6e39be04c779}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!wheel\-Event@{wheel\-Event}}
+\index{wheel\-Event@{wheel\-Event}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{wheel\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::wheel\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Wheel\-Event $\ast$}]{\-\_\-event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_n_g_l_scene_a5ea289b6eb36df76da5e6e39be04c779}
+
+
+called upon scrolling 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-event} & Qt mousewheel event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 133 of file N\-G\-L\-Scene.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_n_g_l_scene_8h}{N\-G\-L\-Scene.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/N\-G\-L\-Scene.\-cpp\end{DoxyCompactItemize}

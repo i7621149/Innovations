@@ -1,0 +1,135 @@
+\hypertarget{struct_shader_variables}{\section{Shader\-Variables Struct Reference}
+\label{struct_shader_variables}\index{Shader\-Variables@{Shader\-Variables}}
+}
+
+
+This contains variables passed to the shader as uniforms, such as resolution, time, rendertime, frame number, mouse data and date it also contains the current material id and transform matrix its member variables are public for ease of use.  
+
+
+
+
+{\ttfamily \#include $<$Shader\-Variables.\-h$>$}
+
+Inheritance diagram for Shader\-Variables\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_shader_variables}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_shader_variables_a6c4056a98de2375814f543ac22b5f7a4}{reset} (bool \-\_\-hard=false)
+\begin{DoxyCompactList}\small\item\em reset values in the shader \end{DoxyCompactList}\item 
+void \hyperlink{struct_shader_variables_a47ff8143a673b365033858fa1acc3d10}{load\-To\-Shader} (G\-Luint \-\_\-prog\-I\-D)
+\begin{DoxyCompactList}\small\item\em load the variables to the shader program \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a022653bc55d573feb772b1502949ad8e}{void \hyperlink{struct_shader_variables_a022653bc55d573feb772b1502949ad8e}{print\-Variables} ()}\label{struct_shader_variables_a022653bc55d573feb772b1502949ad8e}
+
+\begin{DoxyCompactList}\small\item\em print shader variables to std\-::cout for debuggin purposes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_shader_variables_a631f19e4de61bae969179642075e0a0b}{ngl\-::\-Vec3 \hyperlink{struct_shader_variables_a631f19e4de61bae969179642075e0a0b}{resolution}}\label{struct_shader_variables_a631f19e4de61bae969179642075e0a0b}
+
+\begin{DoxyCompactList}\small\item\em x and y are resolution, z is redundant but is there for compatibility with Shader\-Toy programs \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a9dd04ab3efdd62bf3658f3b7bc8bc16e}{float \hyperlink{struct_shader_variables_a9dd04ab3efdd62bf3658f3b7bc8bc16e}{global\-Time}}\label{struct_shader_variables_a9dd04ab3efdd62bf3658f3b7bc8bc16e}
+
+\begin{DoxyCompactList}\small\item\em time in seconds \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a04f3ebdad791f0531244c4fa92cda235}{float \hyperlink{struct_shader_variables_a04f3ebdad791f0531244c4fa92cda235}{time\-Delta}}\label{struct_shader_variables_a04f3ebdad791f0531244c4fa92cda235}
+
+\begin{DoxyCompactList}\small\item\em render time of last frame \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_aba75a7ac7c3275a20820f70ef1673e79}{int \hyperlink{struct_shader_variables_aba75a7ac7c3275a20820f70ef1673e79}{frame}}\label{struct_shader_variables_aba75a7ac7c3275a20820f70ef1673e79}
+
+\begin{DoxyCompactList}\small\item\em frame number \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_ae0d2905374bbfa93be88f3671e3678d0}{ngl\-::\-Vec4 \hyperlink{struct_shader_variables_ae0d2905374bbfa93be88f3671e3678d0}{mouse}}\label{struct_shader_variables_ae0d2905374bbfa93be88f3671e3678d0}
+
+\begin{DoxyCompactList}\small\item\em mouse position. x, y\-: current mouse position if mousedown (or last position of mousedown) z, w\-: initial position of mousedown (negated if mouse up) \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a37ac5fa9b173ad917a5dbb1a3007f59f}{ngl\-::\-Vec4 \hyperlink{struct_shader_variables_a37ac5fa9b173ad917a5dbb1a3007f59f}{date}}\label{struct_shader_variables_a37ac5fa9b173ad917a5dbb1a3007f59f}
+
+\begin{DoxyCompactList}\small\item\em date in year, month, day and seconds since 00\-:00\-:00 \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a4e46780de60b67bc48191fc56ffa9b4b}{int \hyperlink{struct_shader_variables_a4e46780de60b67bc48191fc56ffa9b4b}{mat\-I\-D}}\label{struct_shader_variables_a4e46780de60b67bc48191fc56ffa9b4b}
+
+\begin{DoxyCompactList}\small\item\em id of the current entity \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a1243e729cad6636c1ec7f1f021c36486}{ngl\-::\-Mat4 \hyperlink{struct_shader_variables_a1243e729cad6636c1ec7f1f021c36486}{M\-V}}\label{struct_shader_variables_a1243e729cad6636c1ec7f1f021c36486}
+
+\begin{DoxyCompactList}\small\item\em Model View matrix. \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a6e16012fe625f281a4e59c804fec3ad9}{ngl\-::\-Mat4 \hyperlink{struct_shader_variables_a6e16012fe625f281a4e59c804fec3ad9}{M\-V\-P}}\label{struct_shader_variables_a6e16012fe625f281a4e59c804fec3ad9}
+
+\begin{DoxyCompactList}\small\item\em Model View Project matrix. \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a676818ef1a5d0c2f196f8c9fc2e26552}{ngl\-::\-Mat3 \hyperlink{struct_shader_variables_a676818ef1a5d0c2f196f8c9fc2e26552}{normal\-Matrix}}\label{struct_shader_variables_a676818ef1a5d0c2f196f8c9fc2e26552}
+
+\begin{DoxyCompactList}\small\item\em transform matrix for normals \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a949653174b6900cdb0b3c43e4acbda10}{ngl\-::\-Mat4 \hyperlink{struct_shader_variables_a949653174b6900cdb0b3c43e4acbda10}{M}}\label{struct_shader_variables_a949653174b6900cdb0b3c43e4acbda10}
+
+\begin{DoxyCompactList}\small\item\em Model matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_shader_variables_a4d52f8018bdf17f71192a566ceb66464}{\hyperlink{struct_shader_variables_a4d52f8018bdf17f71192a566ceb66464}{Shader\-Variables} ()}\label{struct_shader_variables_a4d52f8018bdf17f71192a566ceb66464}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hypertarget{struct_shader_variables_a04bcfc5787d0587994ebe68ee9232bff}{\hyperlink{struct_shader_variables_a04bcfc5787d0587994ebe68ee9232bff}{$\sim$\-Shader\-Variables} ()=default}\label{struct_shader_variables_a04bcfc5787d0587994ebe68ee9232bff}
+
+\begin{DoxyCompactList}\small\item\em default deconstuctor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_shader_variables_a4b636626a2610eecffc6342c37450329}{class {\bfseries ngl\-::\-Singleton$<$ Shader\-Variables $>$}}\label{struct_shader_variables_a4b636626a2610eecffc6342c37450329}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contains variables passed to the shader as uniforms, such as resolution, time, rendertime, frame number, mouse data and date it also contains the current material id and transform matrix its member variables are public for ease of use. 
+
+Definition at line 19 of file Shader\-Variables.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_shader_variables_a47ff8143a673b365033858fa1acc3d10}{\index{Shader\-Variables@{Shader\-Variables}!load\-To\-Shader@{load\-To\-Shader}}
+\index{load\-To\-Shader@{load\-To\-Shader}!ShaderVariables@{Shader\-Variables}}
+\subsubsection[{load\-To\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Variables\-::load\-To\-Shader (
+\begin{DoxyParamCaption}
+\item[{G\-Luint}]{\-\_\-prog\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{struct_shader_variables_a47ff8143a673b365033858fa1acc3d10}
+
+
+load the variables to the shader program 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-prog\-I\-D} & the id of the shader program to load to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Shader\-Variables.\-cpp.
+
+\hypertarget{struct_shader_variables_a6c4056a98de2375814f543ac22b5f7a4}{\index{Shader\-Variables@{Shader\-Variables}!reset@{reset}}
+\index{reset@{reset}!ShaderVariables@{Shader\-Variables}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\-Variables\-::reset (
+\begin{DoxyParamCaption}
+\item[{bool}]{\-\_\-hard = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{struct_shader_variables_a6c4056a98de2375814f543ac22b5f7a4}
+
+
+reset values in the shader 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-hard} & whether to reset resolution, mouse and date \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file Shader\-Variables.\-cpp.
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_shader_variables_8h}{Shader\-Variables.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/Shader\-Variables.\-cpp\end{DoxyCompactItemize}

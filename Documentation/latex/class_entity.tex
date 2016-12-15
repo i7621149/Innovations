@@ -1,0 +1,442 @@
+\hypertarget{class_entity}{\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+}
+
+
+this class contains everything the shader library needs to use it it also has information about position, rotation and scale, and functions to change the shader an instance uses  
+
+
+
+
+{\ttfamily \#include $<$Entity.\-h$>$}
+
+Inheritance diagram for Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entity_a137651f62fa6c72984b83ff6c803fa37}{Entity} (int \-\_\-id, ngl\-::\-Vec3 \-\_\-pos)
+\begin{DoxyCompactList}\small\item\em construct \hyperlink{class_entity}{Entity} with id and position, as well as set m\-\_\-alive to true \end{DoxyCompactList}\item 
+\hypertarget{class_entity_aa6ecb9c57b29b60cc49fe44ad4088ecf}{\hyperlink{class_entity_aa6ecb9c57b29b60cc49fe44ad4088ecf}{$\sim$\-Entity} ()=default}\label{class_entity_aa6ecb9c57b29b60cc49fe44ad4088ecf}
+
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+\hypertarget{class_entity_af4b2df22cccd334f7842055377ef45d2}{ngl\-::\-Mat4 \hyperlink{class_entity_af4b2df22cccd334f7842055377ef45d2}{get\-Transform\-Matrix} ()}\label{class_entity_af4b2df22cccd334f7842055377ef45d2}
+
+\begin{DoxyCompactList}\small\item\em return transform matrix returns transform matrix of entity, based on pos, rot and scale \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{class_entity_a644d5880f63b989fb975b7a999804e1b}{get\-Pos} ()
+\begin{DoxyCompactList}\small\item\em get entity postion \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{class_entity_aeaf9c87583d72c2d0b1b89275a747bc2}{get\-Vel} ()
+\begin{DoxyCompactList}\small\item\em get entity velocity \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{class_entity_add65f540d6cc42c97fe9552c7bb25c62}{get\-Rot} ()
+\begin{DoxyCompactList}\small\item\em get entity rotation \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{class_entity_aa74ac8c5835cafe7779efc39a2eaa8ce}{get\-Scale} ()
+\begin{DoxyCompactList}\small\item\em get entity scale \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a1c02a8d465e4c163168164cbf38da541}{set\-Pos} (ngl\-::\-Vec3 \-\_\-pos)
+\begin{DoxyCompactList}\small\item\em set enitity position \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a2b5fe9d66b26923a87fff92dbd6e63ed}{set\-Vel} (ngl\-::\-Vec3 \-\_\-vel)
+\begin{DoxyCompactList}\small\item\em set entity velocity \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a046b959de6e1306e5bcb8682e6623746}{set\-Rot} (ngl\-::\-Vec3 \-\_\-rot)
+\begin{DoxyCompactList}\small\item\em set entity rotation \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_aebf26c8845b31f35104b91be523e84f9}{set\-Scale} (ngl\-::\-Vec3 \-\_\-scale)
+\begin{DoxyCompactList}\small\item\em set entity scale \end{DoxyCompactList}\item 
+int \hyperlink{class_entity_a00a43361a05770b2999ca90c612a159f}{get\-Shader\-Lib\-Index} ()
+\begin{DoxyCompactList}\small\item\em return the current shader index the entity is using \end{DoxyCompactList}\item 
+int \hyperlink{class_entity_a978bc19f08fed863dfb38d07f069430a}{get\-Current\-Index} ()
+\begin{DoxyCompactList}\small\item\em return entity's current index \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a26225c51294cbd3df67c53f29c6335b2}{set\-Current\-Index} (int \-\_\-index)
+\begin{DoxyCompactList}\small\item\em set entity index \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a4fa70ecbdba0609d08a6cb8d385031b1}{reset\-Index\-Range} (int \-\_\-min, int \-\_\-max)
+\begin{DoxyCompactList}\small\item\em set the maximum and minimum shaders the shader can use \end{DoxyCompactList}\item 
+int \hyperlink{class_entity_a1ccffcd9ad3ad9c44040ef7140758ddb}{get\-Min\-Index} ()
+\begin{DoxyCompactList}\small\item\em find the minimum \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} index the entity can have \end{DoxyCompactList}\item 
+int \hyperlink{class_entity_a6f4cf5bb25ba1210953d3d57130ce285}{get\-Max\-Index} ()
+\begin{DoxyCompactList}\small\item\em find the maximum \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} index the entity can have \end{DoxyCompactList}\item 
+int \hyperlink{class_entity_a6e158b373be07455338fd47823354c91}{get\-Mat\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em check the entity type \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_ab0986ba7a1b24f022b5623781050c0f1}{is\-Alive} ()
+\begin{DoxyCompactList}\small\item\em check if the entity is alive \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a59a29d9b7474baf13c9c76859242287d}{virtual void \hyperlink{class_entity_a59a29d9b7474baf13c9c76859242287d}{update} ()=0}\label{class_entity_a59a29d9b7474baf13c9c76859242287d}
+
+\begin{DoxyCompactList}\small\item\em virtual update function to be overwritten \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a2e9a2986527958f0b0c43239efe9b270}{virtual void \hyperlink{class_entity_a2e9a2986527958f0b0c43239efe9b270}{draw} ()=0}\label{class_entity_a2e9a2986527958f0b0c43239efe9b270}
+
+\begin{DoxyCompactList}\small\item\em virtual draw function to be overwritten \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_entity_a63fddde23301d8f868909fa77ea07d56}{int \hyperlink{class_entity_a63fddde23301d8f868909fa77ea07d56}{m\-\_\-mat\-I\-D}}\label{class_entity_a63fddde23301d8f868909fa77ea07d56}
+
+\begin{DoxyCompactList}\small\item\em entity's material I\-D \end{DoxyCompactList}\item 
+\hypertarget{class_entity_adc3eccf96ce5804512cd9d9a343d98f5}{ngl\-::\-Vec3 \hyperlink{class_entity_adc3eccf96ce5804512cd9d9a343d98f5}{m\-\_\-pos}}\label{class_entity_adc3eccf96ce5804512cd9d9a343d98f5}
+
+\begin{DoxyCompactList}\small\item\em postion of entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_ad2b217813dfbe55d39d6438b9b011d97}{ngl\-::\-Vec3 \hyperlink{class_entity_ad2b217813dfbe55d39d6438b9b011d97}{m\-\_\-vel} = ngl\-::\-Vec3(0,0,0)}\label{class_entity_ad2b217813dfbe55d39d6438b9b011d97}
+
+\begin{DoxyCompactList}\small\item\em velocity of entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a7d345e8fda849e4f3f330289497c0955}{ngl\-::\-Vec3 \hyperlink{class_entity_a7d345e8fda849e4f3f330289497c0955}{m\-\_\-rot} = ngl\-::\-Vec3(0,0,0)}\label{class_entity_a7d345e8fda849e4f3f330289497c0955}
+
+\begin{DoxyCompactList}\small\item\em rotation of entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a129334046e89817c024c29c81516843f}{ngl\-::\-Vec3 \hyperlink{class_entity_a129334046e89817c024c29c81516843f}{m\-\_\-scale} = ngl\-::\-Vec3(1,1,1)}\label{class_entity_a129334046e89817c024c29c81516843f}
+
+\begin{DoxyCompactList}\small\item\em scale of entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a78efff1696f4c13a6f88b2fac836a02d}{int \hyperlink{class_entity_a78efff1696f4c13a6f88b2fac836a02d}{m\-\_\-current\-Index} = 0}\label{class_entity_a78efff1696f4c13a6f88b2fac836a02d}
+
+\begin{DoxyCompactList}\small\item\em current shader index \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a93ac8660db956e864a33551c5f119026}{int \hyperlink{class_entity_a93ac8660db956e864a33551c5f119026}{m\-\_\-min\-Index} = 0}\label{class_entity_a93ac8660db956e864a33551c5f119026}
+
+\begin{DoxyCompactList}\small\item\em minumum shader index allowed for entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_ad053fa7e82312dad8e45f397ef857617}{int \hyperlink{class_entity_ad053fa7e82312dad8e45f397ef857617}{m\-\_\-max\-Index} = 99}\label{class_entity_ad053fa7e82312dad8e45f397ef857617}
+
+\begin{DoxyCompactList}\small\item\em maximum shader index allowed for entity \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a0b7fba0256cc4275b4f326351d4750ca}{bool \hyperlink{class_entity_a0b7fba0256cc4275b4f326351d4750ca}{m\-\_\-alive}}\label{class_entity_a0b7fba0256cc4275b4f326351d4750ca}
+
+\begin{DoxyCompactList}\small\item\em whether the entity is alive/active \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class contains everything the shader library needs to use it it also has information about position, rotation and scale, and functions to change the shader an instance uses 
+
+Definition at line 15 of file Entity.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_entity_a137651f62fa6c72984b83ff6c803fa37}{\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-id, }
+\item[{ngl\-::\-Vec3}]{\-\_\-pos}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a137651f62fa6c72984b83ff6c803fa37}
+
+
+construct \hyperlink{class_entity}{Entity} with id and position, as well as set m\-\_\-alive to true 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-id} & entity type, can be set by user and then used in shader \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-pos} & initial position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Entity.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_a978bc19f08fed863dfb38d07f069430a}{\index{Entity@{Entity}!get\-Current\-Index@{get\-Current\-Index}}
+\index{get\-Current\-Index@{get\-Current\-Index}!Entity@{Entity}}
+\subsubsection[{get\-Current\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\-::get\-Current\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a978bc19f08fed863dfb38d07f069430a}
+
+
+return entity's current index 
+
+\begin{DoxyReturn}{Returns}
+current index (relative to its minimum index) 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Entity.\-h.
+
+\hypertarget{class_entity_a6e158b373be07455338fd47823354c91}{\index{Entity@{Entity}!get\-Mat\-I\-D@{get\-Mat\-I\-D}}
+\index{get\-Mat\-I\-D@{get\-Mat\-I\-D}!Entity@{Entity}}
+\subsubsection[{get\-Mat\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\-::get\-Mat\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a6e158b373be07455338fd47823354c91}
+
+
+check the entity type 
+
+\begin{DoxyReturn}{Returns}
+material id 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Entity.\-h.
+
+\hypertarget{class_entity_a6f4cf5bb25ba1210953d3d57130ce285}{\index{Entity@{Entity}!get\-Max\-Index@{get\-Max\-Index}}
+\index{get\-Max\-Index@{get\-Max\-Index}!Entity@{Entity}}
+\subsubsection[{get\-Max\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\-::get\-Max\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a6f4cf5bb25ba1210953d3d57130ce285}
+
+
+find the maximum \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} index the entity can have 
+
+\begin{DoxyReturn}{Returns}
+the maximum index for \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Entity.\-h.
+
+\hypertarget{class_entity_a1ccffcd9ad3ad9c44040ef7140758ddb}{\index{Entity@{Entity}!get\-Min\-Index@{get\-Min\-Index}}
+\index{get\-Min\-Index@{get\-Min\-Index}!Entity@{Entity}}
+\subsubsection[{get\-Min\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\-::get\-Min\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a1ccffcd9ad3ad9c44040ef7140758ddb}
+
+
+find the minimum \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} index the entity can have 
+
+\begin{DoxyReturn}{Returns}
+the minimum index for \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Entity.\-h.
+
+\hypertarget{class_entity_a644d5880f63b989fb975b7a999804e1b}{\index{Entity@{Entity}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!Entity@{Entity}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Entity\-::get\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a644d5880f63b989fb975b7a999804e1b}
+
+
+get entity postion 
+
+\begin{DoxyReturn}{Returns}
+m\-\_\-pos 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Entity.\-h.
+
+\hypertarget{class_entity_add65f540d6cc42c97fe9552c7bb25c62}{\index{Entity@{Entity}!get\-Rot@{get\-Rot}}
+\index{get\-Rot@{get\-Rot}!Entity@{Entity}}
+\subsubsection[{get\-Rot}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Entity\-::get\-Rot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_add65f540d6cc42c97fe9552c7bb25c62}
+
+
+get entity rotation 
+
+\begin{DoxyReturn}{Returns}
+m\-\_\-rot 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Entity.\-h.
+
+\hypertarget{class_entity_aa74ac8c5835cafe7779efc39a2eaa8ce}{\index{Entity@{Entity}!get\-Scale@{get\-Scale}}
+\index{get\-Scale@{get\-Scale}!Entity@{Entity}}
+\subsubsection[{get\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Entity\-::get\-Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_aa74ac8c5835cafe7779efc39a2eaa8ce}
+
+
+get entity scale 
+
+\begin{DoxyReturn}{Returns}
+m\-\_\-scale 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file Entity.\-h.
+
+\hypertarget{class_entity_a00a43361a05770b2999ca90c612a159f}{\index{Entity@{Entity}!get\-Shader\-Lib\-Index@{get\-Shader\-Lib\-Index}}
+\index{get\-Shader\-Lib\-Index@{get\-Shader\-Lib\-Index}!Entity@{Entity}}
+\subsubsection[{get\-Shader\-Lib\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\-::get\-Shader\-Lib\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a00a43361a05770b2999ca90c612a159f}
+
+
+return the current shader index the entity is using 
+
+\begin{DoxyReturn}{Returns}
+shader index for \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Entity.\-h.
+
+\hypertarget{class_entity_aeaf9c87583d72c2d0b1b89275a747bc2}{\index{Entity@{Entity}!get\-Vel@{get\-Vel}}
+\index{get\-Vel@{get\-Vel}!Entity@{Entity}}
+\subsubsection[{get\-Vel}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Entity\-::get\-Vel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_aeaf9c87583d72c2d0b1b89275a747bc2}
+
+
+get entity velocity 
+
+\begin{DoxyReturn}{Returns}
+m\-\_\-vel 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Entity.\-h.
+
+\hypertarget{class_entity_ab0986ba7a1b24f022b5623781050c0f1}{\index{Entity@{Entity}!is\-Alive@{is\-Alive}}
+\index{is\-Alive@{is\-Alive}!Entity@{Entity}}
+\subsubsection[{is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::is\-Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_ab0986ba7a1b24f022b5623781050c0f1}
+
+
+check if the entity is alive 
+
+\begin{DoxyReturn}{Returns}
+whether the entity is alive 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file Entity.\-h.
+
+\hypertarget{class_entity_a4fa70ecbdba0609d08a6cb8d385031b1}{\index{Entity@{Entity}!reset\-Index\-Range@{reset\-Index\-Range}}
+\index{reset\-Index\-Range@{reset\-Index\-Range}!Entity@{Entity}}
+\subsubsection[{reset\-Index\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::reset\-Index\-Range (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-min, }
+\item[{int}]{\-\_\-max}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a4fa70ecbdba0609d08a6cb8d385031b1}
+
+
+set the maximum and minimum shaders the shader can use 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-min} & the minimum index for \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-max} & the maximum index for \hyperlink{class_shader_lib_pro}{Shader\-Lib\-Pro} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a26225c51294cbd3df67c53f29c6335b2}{\index{Entity@{Entity}!set\-Current\-Index@{set\-Current\-Index}}
+\index{set\-Current\-Index@{set\-Current\-Index}!Entity@{Entity}}
+\subsubsection[{set\-Current\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Current\-Index (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a26225c51294cbd3df67c53f29c6335b2}
+
+
+set entity index 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & (relative to its minimum index, eg input 0 to get its minimum) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a1c02a8d465e4c163168164cbf38da541}{\index{Entity@{Entity}!set\-Pos@{set\-Pos}}
+\index{set\-Pos@{set\-Pos}!Entity@{Entity}}
+\subsubsection[{set\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Pos (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a1c02a8d465e4c163168164cbf38da541}
+
+
+set enitity position 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-pos} & postion \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Entity.\-h.
+
+\hypertarget{class_entity_a046b959de6e1306e5bcb8682e6623746}{\index{Entity@{Entity}!set\-Rot@{set\-Rot}}
+\index{set\-Rot@{set\-Rot}!Entity@{Entity}}
+\subsubsection[{set\-Rot}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Rot (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-rot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a046b959de6e1306e5bcb8682e6623746}
+
+
+set entity rotation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-rot} & rotation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file Entity.\-h.
+
+\hypertarget{class_entity_aebf26c8845b31f35104b91be523e84f9}{\index{Entity@{Entity}!set\-Scale@{set\-Scale}}
+\index{set\-Scale@{set\-Scale}!Entity@{Entity}}
+\subsubsection[{set\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Scale (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_aebf26c8845b31f35104b91be523e84f9}
+
+
+set entity scale 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-scale} & scale \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file Entity.\-h.
+
+\hypertarget{class_entity_a2b5fe9d66b26923a87fff92dbd6e63ed}{\index{Entity@{Entity}!set\-Vel@{set\-Vel}}
+\index{set\-Vel@{set\-Vel}!Entity@{Entity}}
+\subsubsection[{set\-Vel}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Vel (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-vel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_entity_a2b5fe9d66b26923a87fff92dbd6e63ed}
+
+
+set entity velocity 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-vel} & velocity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Entity.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/include/\hyperlink{_entity_8h}{Entity.\-h}\item 
+C\-A1/i7621149-\/\-C\-A1/\-Final\-Submission/\-Template\-Project/src/Entity.\-cpp\end{DoxyCompactItemize}
