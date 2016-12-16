@@ -4,7 +4,7 @@
 SHADER MAIN
 
   #specify fragment shader glsl file. This will be combined with sampler2Ds if there are textures and the BaseFragment.glsl file
-  FRAGMENT   shaders/DefaultQuadFragment.glsl
+  FRAGMENT   shaders/one_split.glsl
 
   #specify vertex shader glsl file. This will be combined with the BaseVertex.glsl
   VERTEX     shaders/GeoVertex.glsl
