@@ -5,6 +5,9 @@ float and(float a, float b);
 vec2 posToUV(vec2 pos);
 vec2 UVToPos(vec2 uv);
 
+int width = 500;
+int height = 500;
+
 float cyl1(vec2 pos, float t)
 {
     // time warp
@@ -33,6 +36,38 @@ float cyl2(vec2 pos, float t)
 
     // 2 section exists for zwarp >= 1
     return and(cross, (zwarp-1.0));
+}
+
+float shape(int f_index, vec2 pos, float t)
+{
+    if(f_index == 1)
+    {
+        return cyl1(pos, t);
+    }
+    else if(f_index == 2)
+    {
+        return cyl2(pos, t);
+    }
+    else
+    {
+        return 0.0;
+    }
+}
+
+vec3 colorLookup(int f_index, vec2 pos)
+{
+    if(f_index == 1)
+    {
+        return texture2D(iChannel0, posToUV(pos)).xyz;
+    }
+    else if(f_index == 2)
+    {
+        return texture2D(iChannel1, posToUV(pos)).xyz;
+    }
+    else
+    {
+        return vec3(0.0);
+    }
 }
 
 float or(float a, float b)
@@ -71,97 +106,26 @@ vec2 UVToPos(vec2 uv)
     return vec2(uv.x * 10.0 - 5.0, uv.y * 10.0 - 3.0);
 }
 
-vec3 colBlend(float[2] f, vec3[2] c, int n)
+vec3 colGet(int f_index, vec2 pos, float t)
 {
-    float f1 = f[0];
-    float f2 = f[1];
-    float w1 = 0;
-    float w2 = 0;
-    if(f1 < 0.0 && f2 < 0.0)
+    if(shape(f_index, pos, t) >= 0)
     {
-      float fa1 = abs(f1);
-      float fa2 = abs(f2);
-      float fsum = fa1 + fa2;
-      w1 = fa2 / fsum;
-      w2 = fa1 / fsum;
+        //return vec3(0.0, 1.0, 0.0);
+        return colorLookup(f_index, pos);
     }
     else
     {
-      if(f1 >= 0.0)
-      {
-         w1 = 1.0;
-         w2 = 0.0;
-      }
+        vec3 total_col = vec3(0.0);
+        float total_weight = 0;
+        for(float x = 0; x<1.0; x += 1.0 / 10)
+        {
+            for(float y = 0; y<1.0; y += 1.0 / 10)
+            {
 
-      if(f2 >= 0.0)
-      {
-         w1 = 0.0;
-         w2 = 1.0;
-      }
+            }
+        }
+        return vec3(1.0);
     }
-
-    vec3 s = c[0] * w1 + c[1] * w2;
-
-    return s;
-}
-
-vec3 col1(float f0, vec2 pos)
-{
-    float f1 = and(f0, pos.y);
-
-    float f2 = and(f0,-pos.y);
-
-    vec3 s;
-    vec3 c1 = vec3(0.0, 1.0, 0.0);
-    vec3 c2 = vec3(0.0, 0.0, 1.0);
-
-    float w1;
-    float w2;
-    // color distribution in 4D space-time using partition of unity
-    if(f1 < 0.0 && f2 < 0.0)
-    {
-      float fa1 = abs(f1);
-      float fa2 = abs(f2);
-      float fsum = fa1 + fa2;
-      w1 = fa2 / fsum;
-      w2 = fa1 / fsum;
-    }
-    else
-    {
-      if(f1 >= 0.0)
-      {
-         w1 = 1.0;
-         w2 = 0.0;
-      }
-
-      if(f2 >= 0.0)
-      {
-         w1 = 0.0;
-         w2 = 1.0;
-      }
-    }
-
-    s = c1 * w1 + c2 * w2;
-
-    return s;
-}
-
-vec3 col2(float f0, vec2 pos)
-{
-    float f1 = and(f0, pos.x+0.5);
-
-    float f2 = and(f0, -0.5-pos.x);
-    vec3 c1 = vec3(1.0, 1.0, 0.0);
-    vec3 c2 = vec3(1.0, 0.0, 1.0);
-
-    float f[2];
-    vec3 c[2];
-    f[0] = f1;
-    f[1] = f2;
-    c[0] = c1;
-    c[1] = c2;
-
-    return colBlend(f, c, 2);
 }
 
 vec3 my_model(vec2 pos, float t)
@@ -233,8 +197,8 @@ vec3 my_model(vec2 pos, float t)
     vec2 uv = posToUV(pos);
     //vec3 c1 = vec3(texture2D(iChannel0, uv).xyz); // vec3(1.0, 1.0, 0.0);
     //vec3 c2 = vec3(texture2D(iChannel1, uv).xyz); // vec3(1.0, 0.0, 1.0);
-    vec3 c1 = col1(f1, pos);
-    vec3 c2 = col2(f2, pos);
+    vec3 c1 = ;//colGet(1, pos, t);
+    vec3 c2 = ;//colGet(2, pos, t);
 
     r1=1.0;
     float g1=1.0;
@@ -275,6 +239,7 @@ vec3 my_model(vec2 pos, float t)
       //s[1] = g1 * w1 + g2 * w2;
       //s[2] = b1 * w1 + b2 * w2;
       s = c1 * w1 + c2 * w2;
+      //s = vec3(1.0);
     }
     return s;
 }
@@ -302,3 +267,33 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 // pos toUV:
 // (x+5.0) / 10.0
 // (y+3.0) / 10.0
+/*
+    float f1 = f[0];
+    float f2 = f[1];
+    float w1 = 0;
+    float w2 = 0;
+    if(f[1] < 0.0 && f[2] < 0.0)
+    {
+      float fa1 = abs(f1);
+      float fa2 = abs(f2);
+      float fsum = fa1 + fa2;
+      w1 = fa2 / fsum;
+      w2 = fa1 / fsum;
+    }
+    else
+    {
+      if(f1 >= 0.0)
+      {
+         w1 = 1.0;
+         w2 = 0.0;
+      }
+
+      if(f2 >= 0.0)
+      {
+         w1 = 0.0;
+         w2 = 1.0;
+      }
+    }
+
+    vec3 s = c[0] * w1 + c[1] * w2;
+*/

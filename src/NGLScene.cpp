@@ -94,6 +94,8 @@ void NGLScene::paintGL()
 
   glViewport(0, 0, m_width, m_height);
 
+  ShaderVariables::instance()->printVariables();
+
   // takes a null pointer for camera, which means it will be drawn without transforms
   ShaderLibPro::instance()->draw(&m_background, nullptr);
 
